@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBTIS 101 Motzorongo</title>
+  <link rel="stylesheet" href="style.css">
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #520115;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd4d4;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2, h3, h4 {
+      color: #69051e;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #ddd;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .img-container {
+      margin-top: 15px;
+    }
+
+    .img-container img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, {
+        threshold: 0.2
+      });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Menu.html">Inicio</a></li>
+        <li><a href="Contactos.html">Contactos</a></li>
+        <li><a href="Servicios.html">Servicios</a></li>
+        
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="Imagenes/Imagotipo_DGETI_ok.png" alt=" CBTIS 101" />
+  </header>
+
+</body>
+
+
+ 
+    <h1>Inicio</h1>
+    <div class="Alinear_Flex">
+      <img src="Imagenes/489752860_1125252532735164_1176669648343324106_n.jpg" alt="Fondo"
+      height="500" width="1200"/>
+    </div>
+
+    <h2> CBTis No. 101 de Motzorongo es una institución de educación media superior con enfoque tecnológico e industrial. Para escribir un comentario crítico, podrías considerar aspectos como la calidad educativa, infraestructura, desempeño docente y oportunidades para los estudiantes.
+Aquí tienes un posible comentario crítico:
+"El CBTis No. 101 de Motzorongo ha sido una opción educativa clave en la región, ofreciendo formación tecnológica e industrial a sus estudiantes. Sin embargo, como toda institución, enfrenta desafíos. La infraestructura podría beneficiarse de mejoras para garantizar un ambiente óptimo de aprendizaje. Además, sería valioso fortalecer los programas de actualización docente y ampliar las oportunidades de vinculación con el sector productivo. A pesar de estos puntos, sigue siendo un centro educativo fundamental para la comunidad."
+</h2>
+</body>
+</html>

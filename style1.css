@@ -1,0 +1,16 @@
+.titulo {
+    color: black;
+}
+
+.sub {
+    color: black;
+}
+
+.txt {
+    color:rgb(122, 58, 58)
+}
+
+.Alinear_Flex {
+    display: flex;
+    justify-content: center;
+}
