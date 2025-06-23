@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Sitio – Inicio</title>
+
+  <!-- Preload de imágenes críticas -->
+  <link rel="preload" href="fondo-principal.jpg" as="image">
+  <link rel="preload" href="hero-bg.jpg" as="image">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fondo global */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('imagenes/WhatsApp\ Image\ 2025-06-20\ at\ 12.34.11\ AM.jpeg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-color: #000000; /* color de respaldo */
+      color: #000000;
+    }
+
+    /* Menú */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 0.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .navbar .logo img {
+      height: 40px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      transition: background-color 0.3s;
+    }
+    .nav-links a:hover {
+      background-color: #555;
+      border-radius: 4px;
+    }
+
+    /* Hero / Inicio */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 60px); /* altura total menos nav */
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('hero-bg.jpg') center/cover no-repeat;
+      position: relative;
+      text-align: center;
+      color: #fff;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 1rem;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+    .btn {
+      display: inline-block;
+      background: #520303;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #c25555;
+    }
+
+    /* Responsive: fondo móvil en hero */
+    @media (max-width: 600px) {
+      .hero {
+        background:
+          linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+          url('hero-bg-mobile.jpg') center/cover no-repeat;
+      }
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .sey{
+        color: #fff;
+    }
+
+         /* — RESET y estilos previos — */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: url('imagenes/WhatsApp\ Image\ 2025-06-20\ at\ 12.34.11\ AM.jpeg') center/cover fixed no-repeat #222;
+      color: #333;
+    }
+
+    /* — ESTILOS PARA EL CUERPO — */
+    main {
+      background: #fff;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    main p {
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    /* Layout en dos columnas responsivas */
+    .cuerpo-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    /* Ejemplo de tarjeta */
+    .card {
+      background: #f9f9f9;
+      border: 1px solid #e1e1e1;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .card h3 {
+      margin-bottom: .75rem;
+      font-size: 1.25rem;
+    }
+    .card p { font-size: .95rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Menú con logo -->
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="imagenes/Imagotipo_DGETI_ok.png" alt="Mi Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="acercade.html">Acerca</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sección Inicio / Hero -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido al Cbtis 101</h1>
+      <p>Ofrecemos educacion de calidad y a medida para impulsar el estudio de tu hijo</p>
+      <a href="https://www.facebook.com/CBTIS101MOTZORONGO/?locale=es_LA" class="btn">Descubre Más</a>
+    </div>
+  </section>
+
+  <!-- Aquí podrías agregar más secciones: Servicios, Acerca, Contacto, etc. -->
+<main id="cuerpo">
+    <div class="container">
+      <!-- Sección Introductoria -->
+      <section class="intro-text">
+        <h2>Bienvenido a Nuestra Historia</h2>
+        <p>
+          En <strong>Mi Sitio</strong> El Centro de Bachillerato Tecnológico Industrial y de Servicios No. 101 (CBTis 101) abrió sus puertas el 1 de octubre de 1976 bajo el nombre de Centro de Estudios Científicos y Tecnológicos (CECyT) No. 341. De manera simultánea se fundó la Escuela Técnica Industrial y Comercial No. 338, que con los años evolucionó hasta convertirse en la secundaria local que existe hoy.
+Ubicado en Motzorongo, Tezonapa, Veracruz, este plantel forma parte de la Dirección General de Educación Tecnológica Industrial (DGETI). Desde sus inicios se ha enfocado en la formación integral de los jóvenes, combinando la educación académica con la capacitación práctica, de modo que sus egresados estén listos tanto para incorporarse al mundo laboral como para continuar estudios de nivel superior.
+A lo largo de su trayectoria, el CBTis 101 ha ofrecido especialidades técnicas que abarcan Contabilidad, Producción Industrial de Alimentos, Laboratorista Clínico y Mecánica Industrial, cada una impartida en seis semestres y avalada por un diploma de técnico y un certificado de bachillerato.
+
+        </p>
+      </section>
+
+      <!-- Sección de Destacados en dos columnas -->
+      <section class="cuerpo-columns">
+        <div class="card">
+          <h3>Nuestros Servicios</h3>
+<p>– Técnico en Laboratorio Clínico</p>
+<p>– Técnico en Contabilidad</p>
+<p>– Técnico en Mecánica Industrial</p>
+<p>– Técnico en Producción Industrial de Alimentos</p>
+<p>• Claustro docente altamente capacitado con enfoque 100 % práctico.</p>
+<p>• Programas de apoyo integral: consejería académica y emocional, actividades deportivas y grupos estudiantiles.</p>
+<p>• Entorno formativo que combina valores, responsabilidad social y competencias profesionales.</p>
+
+        </div>
+        <div class="card">
+          <h3>Nuestra Misión</h3>
+          <p>La misión del CBTis 101 es brindar una formación integral a los jóvenes de nivel medio superior, combinando educación académica con capacitación técnica en distintas especialidades. Su objetivo es preparar a los estudiantes para enfrentar los retos del mundo laboral o continuar con estudios superiores, promoviendo valores, responsabilidad social y competencias profesionales.</p>
+        </div>
+        <div class="card">
+          <h3>Equipo Profesional</h3>
+          <p>Un grupo de profresores, ingenieros, licenciados y profesionistas alta mente equipados para la enseñanza, creactividad y desarrollo de sus hijos</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menú con Logo</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    /* Contenedor del nav */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #000000;
+      padding: 0.5rem 1rem;
+    }
+
+    /* Logo */
+    .navbar .logo img {
+      height: 40px; /* Ajusta al tamaño deseado */
+    }
+
+    /* Lista de enlaces */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 0.75rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-links li a:hover {
+      background-color: #555;
+      border-radius: 4px;
+    }
+
+    /* Responsive sencillo (opcional) */
+    @media (max-width: 600px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+     /* — RESET y estilos previos — */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: url('fondo-principal.jpg') center/cover fixed no-repeat #222;
+      color: #333;
+    }
+
+    /* — ESTILOS PARA EL CUERPO — */
+    main {
+      background: #fff;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+    main p {
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+    /* Layout en dos columnas responsivas */
+    .cuerpo-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    /* Ejemplo de tarjeta */
+    .card {
+      background: #f9f9f9;
+      border: 1px solid #e1e1e1;
+      border-radius: 6px;
+      padding: 1rem;
+    }
+    .card h3 {
+      margin-bottom: .75rem;
+      font-size: 1.25rem;
+    }
+    .card p { font-size: .95rem; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="logo">
+      <img src="imagenes/Imagotipo_DGETI_ok.png" alt="Mi Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="acercade.html">Acerca</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+ <!-- SECCIÓN SERVICIOS COMO BOTONES-LINK -->
+<section id="servicios" class="services">
+  <div class="container">
+    <h2>Nuestras Especialidades Técnicas</h2>
+    <div class="services-grid">
+      <a class="service-card" href="conta.html">
+        <h3>Contabilidad</h3>
+        <p>
+          Aprende registro y análisis financiero, manejo de software contable y elaboración de informes fiscales.
+        </p>
+      </a>
+      <a class="service-card" href="analis.html">
+        <h3>Análisis Clínicos</h3>
+        <p>
+          Capacítate en toma y procesamiento de muestras, técnicas de laboratorio clínico y normas de bioseguridad.
+        </p>
+      </a>
+      <a class="service-card" href="meca.html">
+        <h3>Mecánica Industrial</h3>
+        <p>
+          Domina mantenimiento y reparación de maquinaria, uso de herramientas-herramienta y soldadura.
+        </p>
+      </a>
+      <a class="service-card" href="alimen.html">
+        <h3>Producción de Alimentos</h3>
+        <p>
+          Conoce procesos de elaboración y conservación de alimentos, control de calidad e innovación.
+        </p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    background: #fafafa;
+    padding: 4rem 1rem;
+  }
+  .services .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Convertimos el <a> en tarjeta */
+  .service-card {
+    display: block;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-decoration: none;       /* quita subrayado */
+    color: inherit;              /* hereda color del contenido */
+    transition: transform .3s, box-shadow .3s, background .3s;
+  }
+  .service-card:hover,
+  .service-card:focus {
+    background: #eef6ff;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    outline: none;
+  }
+  .service-card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    color: #333;
+  }
+  .service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  @media (max-width: 480px) {
+    .services h2 {
+      font-size: 2rem;
+    }
+  }
+</style>
